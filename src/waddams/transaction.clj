@@ -75,7 +75,7 @@
 
 (defn completed-grouped-transactions [transactions]
   (->> transactions
-       (sort-by :time)
+       (sort-by (juxt :time #(if (= (:type %) :buy) 0 1)))
        grouped-transactions
        (reduce-kv (fn [completed-transactions ticker ticker-transactions]
                     (assoc completed-transactions
