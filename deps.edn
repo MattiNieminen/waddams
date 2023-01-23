@@ -1,1 +1,3 @@
-{:deps {org.clojure/clojure {:mvn/version "1.11.1"}}}
+{:deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        io.github.bonigarcia/webdrivermanager {:mvn/version "5.3.1"}
+        org.seleniumhq.selenium/selenium-java {:mvn/version "4.7.2"}}}
